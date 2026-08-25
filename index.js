@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
   res.render('index.ejs', { posts });
 });
 
-app.get('/:id', (req, res) => {
+app.get('/posts/:id', (req, res) => {
   const post = posts.find(p => p.id === req.params.id);
-  res.render('index.ejs', { post });
+  res.render('index.ejs', { post, posts });
 });
 
 app.post('/submit', (req, res) => {
@@ -32,14 +32,14 @@ app.post('/submit', (req, res) => {
   res.redirect('/');
 });
 
-app.patch('/:id', (req, res) => {
+app.patch('/posts/:id', (req, res) => {
   const post = posts.find(p => p.id === req.params.id);
   post.title = req.body.title;
   post.body = req.body.body;
-  res.redirect(`/${post.id}`);
+  res.redirect("/");
 });
 
-app.delete("/:id", (req, res) => {
+app.delete("/posts/:id", (req, res) => {
   posts = posts.filter(p => p.id !== req.params.id);
   res.redirect("/");
 })
