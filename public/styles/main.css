@@ -1,4 +1,123 @@
-body {
-  background-color: #333;
-  color: #CCC;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #395144;
+  color: #F0EBCE;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.header {
+  background-color: #222831;
+  color: #AA8B56;
+  width: 100%;
+  border-bottom: 1px;
+  border-color: #4E6C50;
+}
+
+.title {
+  margin: 0;
+  padding: 1rem;
+}
+
+main {
+  align-self: center;
+  flex-grow: 1;
+  height: auto 0;
+  width: 80%;
+  max-width: 40rem;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 3rem; */
+}
+
+input[type="text"], textarea {
+  background-color: #395144;
+  border-color: #395144;
+  color: #F0EBCE;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #AA8B56;
+  margin: .5rem 0;
+  padding: .5rem;
+  outline: none;
+}
+
+/* input[type="text"]:focus, textarea:focus {
+} */
+
+.btn {
+  font-weight: bold;
+  background-color: #222831;
+  color: #AA8B56;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  margin: .5rem 0;
+  padding: .6em .9em;
+  cursor: pointer;
+}
+
+.btn + .btn {
+  margin-left: 1rem;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+.button-group {
+  display: flex;
+  justify-content: end;
+}
+
+.delete {
+  background-color:maroon;
+  color: red;
+  border: 2px solid red;
+}
+
+.delete:hover, delete:focus {
+  background-color: red;
+  color: maroon;
+}
+
+.cancel {
+  background-color: #395144;
+  border: 2px solid #222831;
+}
+
+.cancel:hover, .cancel:focus {
+  background-color: #222831;
+}
+
+.post-div > .edit {
+  align-content: self-end;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.hr {
+  border: 1px solid #AA8B56;
+  margin: 1.5rem 0;
+}
+
+.footer {
+  background-color: #222831;
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
 }
